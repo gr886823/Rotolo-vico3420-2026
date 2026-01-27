@@ -1,4 +1,4 @@
-/* Element selectors (created + used) */
+/* Element selectors (2): body, h1 */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -10,7 +10,7 @@ h1 {
   margin: 0 0 6px 0;
 }
 
-/* ID selectors (created + used) */
+/* ID selectors (2+): #pageHeader, #content (plus #heroImage, #pageFooter) */
 #pageHeader {
   padding: 20px;
   background: #222;
@@ -38,7 +38,7 @@ h1 {
   background: #eaeaea;
 }
 
-/* Class selectors (created + used) */
+/* Class selectors (2+): .card, .highlight (plus .footerText) */
 .card {
   background: white;
   padding: 16px;
