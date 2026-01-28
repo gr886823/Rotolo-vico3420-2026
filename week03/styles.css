@@ -1,0 +1,100 @@
+/* ELEMENT selectors (at least 2) */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f3f3;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* ID selectors (at least 2) */
+#pageHeader {
+  padding: 1.25rem;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+#gridLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+#imageSection {
+  padding: 1.25rem;
+}
+
+#pageFooter {
+  padding: 1rem;
+  text-align: center;
+  background: #ddd;
+}
+
+/* CLASS selectors (at least 2) */
+.title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.sectionTitle {
+  margin-bottom: 0.75rem;
+}
+
+.exampleImage {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #bbb;
+}
+
+.caption {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footerText {
+  font-size: 0.9rem;
+}
+
+/* Extra ID styling (still counts as ID selectors being created + used) */
+#cardOne {
+  border-left: 6px solid #444;
+}
+
+#cardTwo {
+  border-left: 6px solid #666;
+}
+
+/* MEDIA QUERY:
+   updates at least 2 selectors (#gridLayout, #pageHeader, .title) */
+@media (max-width: 800px) {
+  #gridLayout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #pageHeader {
+    text-align: left;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
