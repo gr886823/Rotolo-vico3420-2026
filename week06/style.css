@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+ul {
+    list-style-type: square;
+}
+
+#gallery img {
+    width: 200px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
