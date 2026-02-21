@@ -2,27 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Week 6 Lists and Loops</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Troubleshooting Assignment</title>
+    <link rel="stylesheet" href="week06-style.css">
 </head>
 <body>
+    <h2 id="sales-header"></h2>
+    <div id="sales"></div>
 
-    <h1>Week 6 Assignment</h1>
+    <script>
 
-    <h2>My List</h2>
-    <ul id="originalList"></ul>
+        // Multidimensional array
+        const SALES = [
+            ["John Doe", "Energy Drink", "$2.13", "10/23/2025 17:05"],
+            ["Jane Smith", "Candy Bar", "$1.15", "10/23/2025 18:31"],
+            ["Ben Franklin", "Dorito Chips", "$5.45", "10/24/2025 19:54"],
+            ["Betsy Ross", "Doughnuts", "$3.50", "10/24/2025 07:03"],
+            ["John Doe", "Coffee", "$1.50", "10/24/2025 07:10"]
+        ];
 
-    <h2>Alphabetical List</h2>
-    <ul id="sortedList"></ul>
+        // Loop through SALES array
+        for (let x in SALES) {
+            document.getElementById("sales").innerHTML += `
+                <div class="sale-list-item">
+                    <div class="customer">${SALES[x][0]}</div>
+                    <div class="item">${SALES[x][1]}</div>
+                    <div class="total">${SALES[x][2]}</div>
+                    <div class="date-time">${SALES[x][3]}</div>
+                </div>
+            `;
+        }
 
-    <h2>Thumbnail Gallery</h2>
-    <div id="gallery"></div>
+        // Header showing date range
+        document.getElementById("sales-header").innerHTML =
+            "Sales between " + SALES[0][3] + " and " + SALES[SALES.length - 1][3];
 
-    <h2>Menu</h2>
-    <nav>
-        <ul id="menu"></ul>
-    </nav>
-
-    <script src="script.js"></script>
+    </script>
 </body>
 </html>

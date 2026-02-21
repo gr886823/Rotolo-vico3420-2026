@@ -1,29 +1,47 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-h1 {
-    color: darkblue;
-}
-
-ul {
-    list-style-type: square;
-}
-
-#gallery img {
-    width: 200px;
-    margin: 10px;
-    border: 2px solid black;
-}
-
-nav ul {
-    list-style-type: none;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 
-nav li {
-    display: inline;
-    margin-right: 15px;
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+    margin: 30px;
+    text-align: center;
+}
+
+#sales {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sale-list-item {
+    background-color: rgb(234, 237, 250);
+    margin: 15px auto;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+}
+
+.customer {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item {
+    float: left;
+    margin-right: 50px;
+}
+
+.item, .total {
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.date-time {
+    color: gray;
+    font-size: 0.8rem;
 }
