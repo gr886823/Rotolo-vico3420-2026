@@ -1,56 +1,242 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #ffe4e1;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
-nav {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffeaf4;
+  color: #6b3553;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffcfe3;
   position: sticky;
   top: 0;
-  background-color: #ffb6c1;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-nav a {
-  color: #fff;
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.navbar a {
   text-decoration: none;
+  color: #6b3553;
   font-weight: bold;
 }
 
-section {
-  padding: 50px 20px;
-  margin: 20px auto;
-  background: #fff0f5;
-  border-radius: 15px;
-  width: 90%;
+.hero-content,
+.section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
-h1, h2 {
-  color: #ff69b4;
+.paper-card {
+  background: #fff8fc;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 2px dashed #f3a7c4;
+}
+
+.emoji-stickers {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.mini-sticker {
+  font-size: 1.8rem;
+}
+
+.divider {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0.5rem auto;
+  max-width: 900px;
 }
 
 button {
-  background-color: #ff69b4;
-  color: white;
+  background: #ff9fc5;
+  color: #5b2441;
   border: none;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
   cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-button:hover {
-  background-color: #ff85c1;
+button:hover,
+.navbar a:hover,
+.tip-card:hover,
+.quiz-box:hover,
+.flip-card:hover {
+  transform: scale(1.04);
+  transition: 0.2s ease;
 }
 
-.card {
-  display: inline-block;
-  padding: 20px;
-  margin: 10px;
-  background-color: #fff0f5;
-  border: 2px solid #ff69b4;
+.tips-grid,
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tip-card,
+.flip-card,
+.quiz-box {
+  background: #ffd9ea;
+  padding: 1rem;
+  border-radius: 18px;
+}
+
+.quiz-btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 0.7rem;
   border-radius: 10px;
-  cursor: pointer;
+  border: 1px solid #d48aaa;
+  font-size: 1rem;
+}
+
+#plannerList {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+#plannerList li {
+  margin-bottom: 0.5rem;
+  background: #fff0f7;
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+}
+
+.planner-controls {
+  margin-top: 1rem;
+}
+
+.floating-reminder {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+
+.popup-box {
+  background: #fff8fc;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  border: 2px dashed #f3a7c4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hidden {
+  display: none;
+}
+
+.heart {
+  position: fixed;
+  font-size: 16px;
+  pointer-events: none;
+  animation: fadeOut 0.9s linear forwards;
+  z-index: 999;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-18px) scale(1.6);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+canvas {
+  margin-top: 1rem;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .section {
+    margin: 1rem;
+    padding: 1.25rem;
+  }
+
+  .floating-reminder {
+    right: 12px;
+    bottom: 12px;
+  }
 }
