@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Girl Survival Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <button id="reminderBtn" class="floating-reminder" aria-label="Open a reminder note">
+    Need a reminder? 💌
+  </button>
+
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <h2 id="popupTitle">Big sister reminder 💗</h2>
+      <p id="popupText">You are allowed to slow down. Rest is not laziness.</p>
+      <button id="closePopupBtn">Close</button>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="hero" id="home">
+      <div class="top-doodles" aria-hidden="true">
+        <span>♡</span>
+        <span>☺</span>
+        <span>🎀</span>
+        <span>♡</span>
+      </div>
+
+      <h1 class="background-title">College Girl Survival Guide</h1>
+
+      <nav class="scrapbook-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#mental-health">Mental Health</a>
+        <a href="#friendships">Friendship & Social</a>
+        <a href="#academics">Academic</a>
+        <a href="#budgeting">Budget</a>
+        <a href="#safety">Safety</a>
+      </nav>
+
+      <section class="intro-area">
+        <p class="big-quote">“A little big-sister guide for college girls.”</p>
+        <p class="intro-text">
+          This website is made to feel comforting, cute, and helpful. It gives advice and
+          interactive tools for stress, friendships, school, budgeting, and safety.
+        </p>
+
+        <button id="quoteBtn">Show me a big sister quote</button>
+        <p id="quoteOutput" class="quote-output"></p>
+      </section>
+    </header>
+
+    <main>
+      <section id="mental-health" class="scrap-section">
+        <div class="section-label">Mental Health</div>
+        <p>College can feel overwhelming. Use the slider to check in with yourself.</p>
+
+        <label for="stressSlider">Stress level:</label>
+        <input type="range" id="stressSlider" min="1" max="10" value="5" />
+        <p id="stressOutput">Your stress level is 5/10.</p>
+
+        <div class="scrap-cards">
+          <article class="scrap-card">Take a 10-minute walk.</article>
+          <article class="scrap-card">Mute comparison-heavy accounts.</article>
+          <article class="scrap-card">Rest is productive too.</article>
+        </div>
+      </section>
+
+      <section id="friendships" class="scrap-section">
+        <div class="section-label">Friendship & Social</div>
+        <p>Take the quiz to see your college girl vibe.</p>
+
+        <div class="quiz-box">
+          <p>What sounds most like you?</p>
+          <button class="quiz-btn" data-result="You’re the cozy, thoughtful friend who makes people feel safe.">
+            I love cozy nights in
+          </button>
+          <button class="quiz-btn" data-result="You’re the social butterfly who brings energy everywhere.">
+            I love meeting new people
+          </button>
+          <button class="quiz-btn" data-result="You’re the organized big-sister type everyone depends on.">
+            I keep everything together
+          </button>
+          <p id="quizResult"></p>
+        </div>
+
+        <div class="scrap-cards">
+          <article class="scrap-card">Healthy friends respect your boundaries.</article>
+          <article class="scrap-card">Not every friendship is forever.</article>
+          <article class="scrap-card">You can outgrow people and still care about them.</article>
+        </div>
+      </section>
+
+      <section id="academics" class="scrap-section">
+        <div class="section-label">Academic</div>
+        <p>Add a study event to your mini planner.</p>
+
+        <form id="plannerForm">
+          <label for="eventName">Event name:</label>
+          <input type="text" id="eventName" required />
+
+          <label for="eventDate">Date:</label>
+          <input type="date" id="eventDate" required />
+
+          <button type="submit">Add to planner</button>
+        </form>
+
+        <div class="planner-controls">
+          <button id="clearPlannerBtn" type="button">Clear planner</button>
+        </div>
+
+        <ul id="plannerList"></ul>
+      </section>
+
+      <section id="budgeting" class="scrap-section">
+        <div class="section-label">Budget</div>
+        <p>Plan your money for clothes, coffee, and food.</p>
+
+        <form id="budgetForm">
+          <label for="budgetAmount">Monthly budget:</label>
+          <input type="number" id="budgetAmount" min="0" required />
+
+          <label for="coffeeAmount">Coffee:</label>
+          <input type="number" id="coffeeAmount" min="0" required />
+
+          <label for="foodAmount">Food:</label>
+          <input type="number" id="foodAmount" min="0" required />
+
+          <label for="clothesAmount">Clothes:</label>
+          <input type="number" id="clothesAmount" min="0" required />
+
+          <button type="submit">Calculate</button>
+        </form>
+
+        <p id="budgetResult"></p>
+        <canvas id="budgetChart" aria-label="Budget breakdown chart"></canvas>
+      </section>
+
+      <section id="safety" class="scrap-section">
+        <div class="section-label">Safety</div>
+        <p>Click the cards to reveal advice.</p>
+
+        <div class="scrap-cards">
+          <button class="flip-card" data-message="Green flag: They respect your no the first time.">
+            Green Flag
+          </button>
+          <button class="flip-card" data-message="Red flag: They make you feel guilty for setting boundaries.">
+            Red Flag
+          </button>
+          <button class="flip-card" data-message="Safety tip: Share your location with a trusted friend at night.">
+            Walking Home Tip
+          </button>
+        </div>
+
+        <p id="safetyMessage"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with care for college girls everywhere 💗</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

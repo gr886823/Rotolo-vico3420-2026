@@ -157,7 +157,7 @@ popupOverlay.addEventListener("click", (event) => {
 document.addEventListener("mousemove", (event) => {
   const heart = document.createElement("div");
   heart.classList.add("heart");
-  heart.textContent = "💗";
+  heart.textContent = "♡";
   heart.style.left = `${event.clientX}px`;
   heart.style.top = `${event.clientY}px`;
   document.body.appendChild(heart);

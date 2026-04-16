@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #3f2d2d;
+  line-height: 1.6;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fffdf8 0px,
+      #fffdf8 34px,
+      #c8ddf3 35px,
+      #fffdf8 36px
+    );
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 70px;
+  width: 3px;
+  height: 100%;
+  background: #ff8db3;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  padding-top: 2rem;
+}
+
+.top-doodles {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  color: #ff6fa3;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.background-title {
+  text-align: center;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  line-height: 0.95;
+  color: rgba(255, 141, 179, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.scrapbook-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.scrapbook-nav a {
+  text-decoration: none;
+  color: #2f2a2a;
+  border: 2px solid #ff7aa8;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1rem;
+  min-width: 130px;
+  text-align: center;
+  font-weight: 600;
+  margin: -1px;
+}
+
+.scrapbook-nav a:hover {
+  background: #ffe1ec;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+.intro-area {
+  max-width: 850px;
+  margin: 4rem auto 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.big-quote {
+  font-size: 2rem;
+  color: #3b2e2e;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+.scrap-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 252, 248, 0.85);
+  border: 3px solid #ff7aa8;
+  border-radius: 14px;
+  box-shadow: 6px 6px 0 rgba(255, 141, 179, 0.18);
+  position: relative;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.85rem;
+  border: 2px solid #ff7aa8;
+  background: #fff3f8;
+  font-weight: bold;
+  color: #4a3434;
+}
+
+.scrap-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.scrap-card,
+.quiz-box,
+.flip-card {
+  background: #ffe6f0;
+  border: 2px solid #ff9fc0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 4px 4px 0 rgba(255, 141, 179, 0.15);
+}
+
+.quiz-box {
+  margin-top: 1rem;
+}
+
+button {
+  background: #ffb1cc;
+  color: #432f2f;
+  border: 2px solid #ff7aa8;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: #ffd3e2;
+  transform: scale(1.03);
+  transition: 0.2s ease;
+}
+
+.quiz-btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 0.75rem;
+  border: 2px solid #f0a0be;
+  border-radius: 10px;
+  background: #fffdfd;
+  font-size: 1rem;
+}
+
+#plannerList {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+#plannerList li {
+  margin-bottom: 0.6rem;
+  background: #fff3f8;
+  border: 2px solid #ffbad1;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+}
+
+.planner-controls {
+  margin-top: 1rem;
+}
+
+canvas {
+  margin-top: 1rem;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffc5d9;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+}
+
+.floating-reminder {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+
+.popup-box {
+  background: #fffafc;
+  border: 3px solid #ff8fb7;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 8px 8px 0 rgba(255, 141, 179, 0.15);
+}
+
+.hidden {
+  display: none;
+}
+
+.heart {
+  position: fixed;
+  font-size: 16px;
+  pointer-events: none;
+  animation: fadeOut 0.9s linear forwards;
+  z-index: 999;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-18px) scale(1.5);
+  }
+}
+
+@media (max-width: 700px) {
+  body::before {
+    left: 40px;
+  }
+
+  .background-title {
+    font-size: 2.6rem;
+  }
+
+  .scrapbook-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scrapbook-nav a {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .scrap-section {
+    padding: 1.25rem;
+  }
+
+  .big-quote {
+    font-size: 1.5rem;
+  }
+}
