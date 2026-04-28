@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <button id="reminderBtn" class="floating-reminder" aria-label="Open a reminder note">
     Need a reminder? 💌
@@ -34,17 +35,18 @@
       <nav class="scrapbook-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#mental-health">Mental Health</a>
-        <a href="#friendships">Friendship & Social</a>
+        <a href="#friendships">Friendship</a>
         <a href="#academics">Academic</a>
         <a href="#budgeting">Budget</a>
         <a href="#safety">Safety</a>
+        <a href="#resources">Resources</a>
       </nav>
 
       <section class="intro-area">
         <p class="big-quote">“A little big-sister guide for college girls.”</p>
         <p class="intro-text">
           This website is made to feel comforting, cute, and helpful. It gives advice and
-          interactive tools for stress, friendships, school, budgeting, and safety.
+          interactive tools for stress, friendships, school, budgeting, safety, and campus support.
         </p>
 
         <button id="quoteBtn">Show me a big sister quote</button>
@@ -74,15 +76,19 @@
 
         <div class="quiz-box">
           <p>What sounds most like you?</p>
+
           <button class="quiz-btn" data-result="You’re the cozy, thoughtful friend who makes people feel safe.">
             I love cozy nights in
           </button>
+
           <button class="quiz-btn" data-result="You’re the social butterfly who brings energy everywhere.">
             I love meeting new people
           </button>
+
           <button class="quiz-btn" data-result="You’re the organized big-sister type everyone depends on.">
             I keep everything together
           </button>
+
           <p id="quizResult"></p>
         </div>
 
@@ -95,7 +101,7 @@
 
       <section id="academics" class="scrap-section">
         <div class="section-label">Academic</div>
-        <p>Add a study event to your mini planner.</p>
+        <p>Add a study event to your mini planner. Your planner saves even after refreshing.</p>
 
         <form id="plannerForm">
           <label for="eventName">Event name:</label>
@@ -146,15 +152,38 @@
           <button class="flip-card" data-message="Green flag: They respect your no the first time.">
             Green Flag
           </button>
+
           <button class="flip-card" data-message="Red flag: They make you feel guilty for setting boundaries.">
             Red Flag
           </button>
+
           <button class="flip-card" data-message="Safety tip: Share your location with a trusted friend at night.">
             Walking Home Tip
           </button>
         </div>
 
         <p id="safetyMessage"></p>
+      </section>
+
+      <section id="resources" class="scrap-section">
+        <div class="section-label">Campus Resources</div>
+        <p>
+          This section gives users a quick place to remember where to look for help on campus.
+        </p>
+
+        <div class="scrap-cards">
+          <article class="scrap-card">
+            <strong>Academic Help:</strong> tutoring, professor office hours, study groups, and writing centers.
+          </article>
+
+          <article class="scrap-card">
+            <strong>Mental Health:</strong> counseling services, wellness resources, and trusted support systems.
+          </article>
+
+          <article class="scrap-card">
+            <strong>Safety:</strong> campus police, safe walk programs, emergency contacts, and trusted friends.
+          </article>
+        </div>
       </section>
     </main>
 
